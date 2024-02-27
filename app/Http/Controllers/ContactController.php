@@ -46,11 +46,26 @@ class ContactController extends Controller
 
     public function update(Request $request, Contact $contact)
     {
+        $request->validate([
+            'name' => 'required|min:6',
+            'contact' => 'required|digits:9|unique:contacts,contact,' . $contact->id,
+            'email' => 'required|email|unique:contacts,email,' . $contact->id,
+        ]);
+
+        $contact->update([
+            'name' => $request->input('name'),
+            'contact' => $request->input('contact'),
+            'email' => $request->input('email'),
+        ]);
+
+        return redirect()->route('contact.index')->with('success', 'Contact updated successfully.');
 
     }
 
     public function destroy(Contact $contact)
     {
+        $contact->delete();
+        return redirect()->route('contacts.index');
     }
 
     public function validadeContactsInput($request){
