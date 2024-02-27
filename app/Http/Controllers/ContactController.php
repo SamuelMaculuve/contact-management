@@ -24,11 +24,18 @@ class ContactController extends Controller
     public function store(Request $request)
     {
 
-        $validatedData = $this->validadeContactsInput($request);
+        try {
 
-        Contact::create($validatedData);
+            $validatedData = $this->validadeContactsInput($request);
 
-        return redirect()->route('contact.index')->with('success', 'Contacto gravado com sucesso');
+            Contact::create($validatedData);
+
+            return redirect()->route('contact.index')->with('success', 'Contacto gravado com sucesso');
+
+        }catch (\Exception $e){
+
+            return redirect()->route('contact.index')->with('error', 'Ocorreu um erro ao gravar');
+        }
 
     }
 

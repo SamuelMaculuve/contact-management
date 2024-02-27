@@ -8,10 +8,10 @@
                   @if(isset($contact)) action="{{ route('contact.update',$contact->id) }}" @else action="{{ route('contact.store') }}" @endif
                   enctype="multipart/form-data"
                 >
-                    @csrf
-                    @if(isset($contact))
-                        @method('PUT')
-                    @endif
+                @csrf
+                @if(isset($contact))
+                    @method('PUT')
+                @endif
                 <div class="col-12">
                     <div class="w-100 my-3">
                         <div class="bg-mattBlackLight enrolments px-3 py-3">
