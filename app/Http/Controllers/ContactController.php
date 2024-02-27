@@ -24,7 +24,7 @@ class ContactController extends Controller
     public function store(Request $request)
     {
 
-        $validatedData =  $this->validadeContactsInput($request);
+        $validatedData = $this->validadeContactsInput($request);
 
         Contact::create($validatedData);
 

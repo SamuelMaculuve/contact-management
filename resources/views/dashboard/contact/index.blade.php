@@ -5,6 +5,10 @@
         <div class="container-fluid ">
             <!--GRID 2-->
             <div class="row">
+                @if(session('success'))
+                    @include('alerts.success-message')
+                @endif
+
                 <div class="col-lg-12">
                     <div class="w-100 my-3">
                         <div class="bg-mattBlackLight enrolments px-3 py-3">
