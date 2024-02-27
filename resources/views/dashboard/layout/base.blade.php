@@ -33,31 +33,15 @@
             <i class="fas fa-bars"></i>
         </button>
         @include('dashboard.includes.navbar_top')
-        <div class="w-100 d-flex align-items-end justify-content-end">
+
                     @if(auth()->check())
-                <ul class="navbar-nav px-2" style="margin-left: 500px;">
-
-                <li class="nav-item dropdown d-flex mx-4">
-                        <i class="fas fa-angle-down text-dark ft-18 mt-3" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-
-                        <div class="img d-flex align-items-center justify-content-center">
-
-                            <img src="{{ asset('dashboard/img/pessoa1.png') }}" alt="">
-                            <div
-                                class="dropdown-menu dropdown-menu-right"
-                                aria-labelledby="navbarDropdown"
-                            >
-                                <a class="dropdown-item d-flex align-items-center" href="#"  onclick="event.preventDefault();document.getElementById('logout-form').submit();"  style="margin-left: 500px;">
-                                    <i class="fas fa-sign-out text-dark"></i>
-                                    Sair
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </div>
-                        </div>
-                    </li>
-
+                <a class="" href="#"  onclick="event.preventDefault();document.getElementById('logout-form').submit();"  style="margin-left: 500px;">>
+                    <i class="fas fa-sign-out text-dark"></i>
+                    Sair
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
                     @else
                         <a href="{{ route('login') }}" style="margin-left: 500px;">Entrar</a>
                     @endif

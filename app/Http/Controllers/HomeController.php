@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        $contacts = Contact::paginate(10);
+
+        return view('dashboard.contact.index',compact('contacts'));
     }
 }
