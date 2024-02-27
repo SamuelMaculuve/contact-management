@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="{{ asset('dashboard/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('dashboard/css/style.css') }}" />
 
-    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -67,14 +64,10 @@
 <script src="https://kit.fontawesome.com/3864bbfe83.js" crossorigin="anonymous"></script>
 <script src="{{ asset('dashboard/js/jquery.min.js') }}"></script>
 <script src="{{ asset('dashboard/js/popper.min.js') }}"></script>
-<script src="{{ asset('dashboard/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('dashboard/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('dashboard/js/script.js') }}"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('dashboard/js/bootstrap.min.js') }}"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 
 </body>
 </html>

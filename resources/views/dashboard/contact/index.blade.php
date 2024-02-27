@@ -40,7 +40,7 @@
                                         <td>
                                             <a href="{{ route('contact.show', $contact->id) }}">Show</a>
                                             <a href="{{ route('contact.edit', $contact->id) }}">Edit</a>
-                                            <a href="{{ route('contact.edit', $contact->id) }}"><i class="far fa-check-circle me-1"></i></a>
+                                            <a href="{{ route('contact.edit', $contact->id) }}">Apagar</a>
                                         </td>
                                     </tr>
                                 @endforeach
