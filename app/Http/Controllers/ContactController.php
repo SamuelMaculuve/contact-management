@@ -36,29 +36,16 @@ class ContactController extends Controller
 
     public function show(Contact $contact)
     {
-        return view('contacts.show', compact('contact'));
+        return view('dashboard.contact.show', compact('contact'));
     }
 
     public function edit(Contact $contact)
     {
-        return view('contacts.edit', compact('contact'));
+        return view('dashboard.contacts.edit', compact('contact'));
     }
 
     public function update(Request $request, Contact $contact)
     {
-        $request->validate([
-            'name' => 'required|min:6',
-            'contact' => 'required|digits:9|unique:contacts,contact,' . $contact->id,
-            'email' => 'required|email|unique:contacts,email,' . $contact->id,
-        ]);
-
-        $contact->update([
-            'name' => $request->input('name'),
-            'contact' => $request->input('contact'),
-            'email' => $request->input('email'),
-        ]);
-
-        return redirect()->route('contact.index')->with('success', 'Contact updated successfully.');
 
     }
 
