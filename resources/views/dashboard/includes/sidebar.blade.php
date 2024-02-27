@@ -9,7 +9,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="#" class="nav-link px-2">
+            <a href="{{ route('contact.index') }}" class="nav-link px-2">
                 <i class="fas fa-school icon"></i>
                 <span class="text"> Contactos</span>
             </a>
