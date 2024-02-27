@@ -13,7 +13,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 
     // Display the specified contact
-    Route::get('/contact/{contact}', [ContactController::class, 'show'])->name('contact.show');
+    Route::get('/contact/show/{contact}', [ContactController::class, 'show'])->name('contact.show');
 
     // Show the form for editing the specified contact
     Route::get('/contact/{contact}/edit', [ContactController::class, 'edit'])->name('contact.edit');
@@ -22,7 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/contact/{contact}', [ContactController::class, 'update'])->name('contact.update');
 
     // Remove the specified contact from storage
-    Route::delete('/contact/{contact}', [ContactController::class, 'destroy'])->name('contact.destroy');
+    Route::delete('/contact/destroy/{contact}', [ContactController::class, 'destroy'])->name('contact.destroy');
 
 });
 

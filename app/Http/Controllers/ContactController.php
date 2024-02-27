@@ -61,7 +61,6 @@ class ContactController extends Controller
 
     public function destroy(Contact $contact)
     {
-        dd($contact);
         try {
 
             $contact->delete();
@@ -69,6 +68,7 @@ class ContactController extends Controller
             return redirect()->route('contact.index')->with('success', 'Registro apagado com sucesso');
 
         }catch (Exception $e){
+
             return redirect()->route('contact.index')->with('error', 'Ocorreu um erro ao apagar o dato');
         }
     }

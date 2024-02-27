@@ -5,9 +5,6 @@
         <div class="container-fluid ">
             <!--GRID 2-->
             <div class="row">
-                @if(session('success'))
-                    @include('alerts.success-message')
-                @endif
 
                 <div class="col-lg-12">
                     <div class="w-100 my-3">
@@ -15,6 +12,9 @@
                             <div class="d-flex justify-content-between pb-5">
                                 <h5 class="mb-2">Lista de Contactos</h5>
                             </div>
+                            @if(session('success'))
+                                @include('dashboard.alerts.success-message')
+                            @endif
                             <div class="row">
                                 <div class="col-4">
                                     <a href="{{ route("contact.create") }}" class=" btn-confirm btn-confirm-color">
@@ -62,8 +62,9 @@
                                                     Tem certeza que deseja apagar o contacto de <b>{{ $contact->name }}</b>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <form action="{{ route('contact.destroy', $contact->id) }}" method="DELETE">
+                                                    <form action="{{ route('contact.destroy', $contact->id) }}" method="post">
                                                        @csrf
+                                                        @method('delete')
                                                         <button type="submit" class="btn btn-danger">Apagar</button>
                                                     </form>
                                                 </div>
