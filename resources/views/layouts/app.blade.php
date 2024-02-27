@@ -13,9 +13,13 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <!-- Scripts -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/app.js') }}" defer></script>
+{{--    <!-- Scripts -->--}}
+{{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
+{{--    <script src="{{ asset('js/app.js') }}" ></script>--}}
+
+    <link rel="stylesheet" href="{{ asset('dashboard/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('dashboard/css/style.css') }}" />
+
 </head>
 <body>
     <div id="app">
@@ -77,5 +81,12 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('dashboard/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('dashboard/js/popper.min.js') }}"></script>
+    <script src="{{ asset('dashboard/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('dashboard/js/script.js') }}"></script>
+    <script src="{{ asset('dashboard/js/bootstrap.min.js') }}"></script>
+
 </body>
 </html>
