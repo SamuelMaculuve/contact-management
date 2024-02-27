@@ -11,15 +11,7 @@
                             <div class="d-flex justify-content-between pb-5">
                                 <h5 class="mb-2">Detalhes do Contacto</h5>
                             </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    <a href="{{ route('contact.show', $contact->id) }}" class=" btn-confirm btn-confirm-color">
-                                        Editar
-                                    </a>
 
-                                </div>
-
-                            </div>
                             <div class="col-8 mt-5">
                                 <table class="table">
                                     <tbody>

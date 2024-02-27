@@ -15,15 +15,15 @@
                             @if(session('success'))
                                 @include('dashboard.alerts.success-message')
                             @endif
+                            @if(session('error'))
+                                @include('dashboard.alerts.error-message')
+                            @endif
                             <div class="row">
                                 <div class="col-4">
                                     <a href="{{ route("contact.create") }}" class=" btn-confirm btn-confirm-color">
                                         + Novo contacto
                                     </a>
                                 </div>
-                            </div>
-                            <div class="my-4">
-
                             </div>
 
                             <table class="table">
