@@ -21,18 +21,33 @@
                             <div class="my-4">
 
                             </div>
-                            <table class="table schools-datatable">
+
+                            <table class="table">
                                 <thead>
                                 <tr>
-                                    <th scope="col">No</th>
-
-                                    <th scope="col"></th>
+                                    <th>Nome</th>
+                                    <th>Contacto</th>
+                                    <th>Email</th>
+                                    <th>Acção</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-
+                                @foreach ($contacts as $contact)
+                                    <tr>
+                                        <td>{{ $contact->name }}</td>
+                                        <td>{{ $contact->contact }}</td>
+                                        <td>{{ $contact->email }}</td>
+                                        <td>
+                                            <a href="{{ route('contact.show', $contact->id) }}">Show</a>
+                                            <a href="{{ route('contact.edit', $contact->id) }}">Edit</a>
+                                            <a href="{{ route('contact.edit', $contact->id) }}"><i class="far fa-check-circle me-1"></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
+
+                            {{ $contacts->links() }}
 
                         </div>
                     </div>
