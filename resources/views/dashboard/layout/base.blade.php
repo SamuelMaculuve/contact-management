@@ -18,48 +18,48 @@
         </button>
         @include('dashboard.includes.navbar_top')
         <div class="w-100 d-flex align-items-end justify-content-end">
-            <ul class="navbar-nav px-2">
+                    @if(auth()->check())
+                <ul class="navbar-nav px-2">
+
                 <li class="nav-item dropdown d-flex mx-4">
-                    <i class="fas fa-angle-down text-dark ft-18 mt-3" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                    <div class="img d-flex align-items-center justify-content-center">
+                        <i class="fas fa-angle-down text-dark ft-18 mt-3" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
 
-                        <img src="{{ asset('dashboard/img/pessoa1.png') }}" alt="">
-                        <div
-                            class="dropdown-menu dropdown-menu-right"
-                            aria-labelledby="navbarDropdown"
-                        >
-                            <a class="dropdown-item d-flex align-items-center" href="#"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                <i class="fas fa-sign-out text-dark"></i>
-                                Sair
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
+                        <div class="img d-flex align-items-center justify-content-center">
+
+                            <img src="{{ asset('dashboard/img/pessoa1.png') }}" alt="">
+                            <div
+                                class="dropdown-menu dropdown-menu-right"
+                                aria-labelledby="navbarDropdown"
+                            >
+                                <a class="dropdown-item d-flex align-items-center" href="#"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out text-dark"></i>
+                                    Sair
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </div>
                         </div>
+                    </li>
+                </ul>
+                    @else
+                        <a href="{{ route('login') }}">Entrar</a>
+                    @endif
 
-                    </div>
 
-                </li>
 
-            </ul>
+
+
         </div>
     </div>
 
 </nav>
 <div class="wrapper d-flex ">
 
-    <div class="sideMenu bg-mattBlackLight px-3">
-
-        <div class="mt-5 text-center">
-            <h4 class="text-dark mt-4 fixed-top">CONTACTS</h4>
-        </div>
-        @include('dashboard.includes.sidebar')
-    </div>
-    <div class="content">
+    <div class="container">
         @yield('content')
     </div>
 </div>
-
 
 <script src="https://kit.fontawesome.com/3864bbfe83.js" crossorigin="anonymous"></script>
 <script src="{{ asset('dashboard/js/jquery.min.js') }}"></script>

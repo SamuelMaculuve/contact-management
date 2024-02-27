@@ -2,7 +2,11 @@
     <div>
         <a href="" class="text-dark">
             <h5 class="text-left">
-{{--                Olá  {{ Auth::user()->name }}--}}
+                @if(auth()->check())
+                    Olá  {{ Auth::user()->name }}
+                @else
+                    Olá
+                @endif
             </h5>
             <p>{{ date('Y-m-d H:i:s') }}</p>
         </a>

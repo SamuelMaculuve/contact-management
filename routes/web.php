@@ -4,11 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware(['auth'])->group(function () {
 
     // Show the form for creating a new contact
@@ -33,9 +28,7 @@ Route::middleware(['auth'])->group(function () {
 
 Auth::routes();
 
-
-// Display the contact list
-Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/', [ContactController::class, 'index'])->name('contact.index');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
