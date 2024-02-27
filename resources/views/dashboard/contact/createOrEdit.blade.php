@@ -15,7 +15,7 @@
                 <div class="col-12">
                     <div class="w-100 my-3">
                         <div class="bg-mattBlackLight enrolments px-3 py-3">
-                            <h5 class="mb-2">Adicionar novo contacto</h5>
+                            <h5 class="mb-2">Adicionar novo contacto | <a href="/"><-Voltar</a></h5>
                             <div class="row mb-3">
                                 <div class="col-12">
                                     <input type="text" name="name" required

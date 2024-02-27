@@ -18,7 +18,7 @@
                             @if(session('error'))
                                 @include('dashboard.alerts.error-message')
                             @endif
-                            <div class="row">
+                            <div class="row" style="margin-bottom: 50px;">
                                 <div class="col-4">
                                     <a href="{{ route("contact.create") }}" class=" btn-confirm btn-confirm-color">
                                         + Novo contacto

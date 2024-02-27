@@ -9,7 +9,7 @@
                     <div class="w-100 my-3">
                         <div class="bg-mattBlackLight enrolments px-3 py-3">
                             <div class="d-flex justify-content-between pb-5">
-                                <h5 class="mb-2">Detalhes do Contacto</h5>
+                                <h5 class="mb-2">Detalhes do Contacto | <a href="/"><-Voltar</a></h5>
                             </div>
 
                             <div class="col-8 mt-5">
