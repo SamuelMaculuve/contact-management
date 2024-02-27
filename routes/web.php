@@ -10,13 +10,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth'])->group(function () {
-    //contact crud
-    Route::resource('contact', ContactController::class);
-});
+//dashboard
+Route::get('dashboard-page', [DashboardController::class, 'index'])->name('dashboard');
 
-//login
+//contact crud
+Route::resource('contact', ContactController::class);
+
 Auth::routes();
 
-//home
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
