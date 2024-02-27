@@ -48,7 +48,7 @@
     </div>
 
 </nav>
-<div class="wrapper d-flex ">
+<div class="wrapper d-flex " >
 
     <div class="container">
         @yield('content')
