@@ -33,11 +33,11 @@
                         >
                             <a class="dropdown-item d-flex align-items-center" href="#"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 <i class="fas fa-sign-out text-dark"></i>
-                                Terminar
+                                Sair
                             </a>
-{{--                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-{{--                                {{ csrf_field() }}--}}
-{{--                            </form>--}}
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </div>
 
                     </div>

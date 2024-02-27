@@ -2,7 +2,7 @@
     <div>
         <a href="" class="text-dark">
             <h5 class="text-left">
-{{--                {{ Auth::user()->name }}--}}
+                Olá  {{ Auth::user()->name }}
             </h5>
             <p>{{ date('Y-m-d H:i:s') }}</p>
         </a>

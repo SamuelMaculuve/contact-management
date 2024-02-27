@@ -15,3 +15,7 @@ Route::get('dashboard-page', [DashboardController::class, 'index'])->name('dashb
 
 //contact crud
 Route::resource('contact', ContactController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
