@@ -5,6 +5,10 @@
         <div class="container-fluid ">
             <!--GRID 2-->
             <div class="row">
+                @if(session('success'))
+                    @include('alerts.success-message')
+                @endif
+
                 <div class="col-lg-12">
                     <div class="w-100 my-3">
                         <div class="bg-mattBlackLight enrolments px-3 py-3">
@@ -21,18 +25,33 @@
                             <div class="my-4">
 
                             </div>
-                            <table class="table schools-datatable">
+
+                            <table class="table">
                                 <thead>
                                 <tr>
-                                    <th scope="col">No</th>
-
-                                    <th scope="col"></th>
+                                    <th>Nome</th>
+                                    <th>Contacto</th>
+                                    <th>Email</th>
+                                    <th>Acção</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-
+                                @foreach ($contacts as $contact)
+                                    <tr>
+                                        <td>{{ $contact->name }}</td>
+                                        <td>{{ $contact->contact }}</td>
+                                        <td>{{ $contact->email }}</td>
+                                        <td>
+                                            <a href="{{ route('contact.show', $contact->id) }}">Show</a>
+                                            <a href="{{ route('contact.edit', $contact->id) }}">Edit</a>
+                                            <a href="{{ route('contact.edit', $contact->id) }}">Apagar</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
+
+                            {{ $contacts->links() }}
 
                         </div>
                     </div>

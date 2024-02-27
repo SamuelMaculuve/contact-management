@@ -27,15 +27,15 @@
                                     <tbody>
                                     <tr>
                                         <td>Nome</td>
-                                        <td>Mark</td>
+                                        <td>{{ $contact->name ?? "N/A" }}</td>
                                     </tr>
                                     <tr>
                                         <td>Contacto</td>
-                                        <td>Mark</td>
+                                        <td>{{ $contact->contact ?? "N/A" }}</td>
                                     </tr>
                                     <tr>
                                         <td>Email</td>
-                                        <td>Mark</td>
+                                        <td>{{ $contact->email ?? "N/A" }}</td>
                                     </tr>
                                     </tbody>
                                 </table>
