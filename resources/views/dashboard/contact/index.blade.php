@@ -9,37 +9,30 @@
                     <div class="w-100 my-3">
                         <div class="bg-mattBlackLight enrolments px-3 py-3">
                             <div class="d-flex justify-content-between pb-5">
-                                <h5 class="mb-2">Detalhes do Contacto</h5>
+                                <h5 class="mb-2">Lista de Contactos</h5>
                             </div>
                             <div class="row">
                                 <div class="col-4">
                                     <a href="{{ route("contact.create") }}" class=" btn-confirm btn-confirm-color">
-                                        Editar
-                                    </a>
-                                    <a href="{{ route("contact.create") }}" class=" btn-confirm btn-confirm-color">
-                                        Apagar
+                                        + Novo contacto
                                     </a>
                                 </div>
+                            </div>
+                            <div class="my-4">
 
                             </div>
-                            <div class="col-8 mt-5">
-                                <table class="table">
-                                    <tbody>
-                                    <tr>
-                                        <td>Nome</td>
-                                        <td>Mark</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Contacto</td>
-                                        <td>Mark</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td>Mark</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <table class="table schools-datatable">
+                                <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+
+                                    <th scope="col"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
 
                         </div>
                     </div>
