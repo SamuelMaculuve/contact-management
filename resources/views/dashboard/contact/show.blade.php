@@ -13,12 +13,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-4">
-                                    <a href="{{ route("contact.create") }}" class=" btn-confirm btn-confirm-color">
+                                    <a href="{{ route('contact.show', $contact->id) }}" class=" btn-confirm btn-confirm-color">
                                         Editar
                                     </a>
-                                    <a href="{{ route("contact.create") }}" class=" btn-confirm btn-confirm-color">
-                                        Apagar
-                                    </a>
+
                                 </div>
 
                             </div>
